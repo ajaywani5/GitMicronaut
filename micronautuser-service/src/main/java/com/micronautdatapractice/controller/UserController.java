@@ -7,7 +7,7 @@ import io.micronaut.http.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-
+//I am practicing the video of Amit Bhave for Git Practice
 @Controller("/api/users")
 public class UserController {
 
@@ -34,7 +34,7 @@ public class UserController {
     public HttpResponse<User> updateUser(@PathVariable int id,@Body User user){
         return HttpResponse.ok(userService.updateUser(id,user));
     }
-
+// comment added on delete request
     @Delete("/{id}")
     public HttpResponse<Void> deleteUser(@PathVariable int id){
         userService.deleteUser(id);
